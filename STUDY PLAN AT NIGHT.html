@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Night Study Plan</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f3f5ff;
+      color: #202445;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 48px 20px;
+      background:
+        radial-gradient(circle at 10% 10%, #dce8ff 0, transparent 28%),
+        radial-gradient(circle at 90% 90%, #f4dcff 0, transparent 30%),
+        #f3f5ff;
+    }
+
+    main {
+      width: min(900px, 100%);
+      margin: 0 auto;
+      overflow: hidden;
+      border: 1px solid #e4e7f5;
+      border-radius: 24px;
+      background: #fff;
+      box-shadow: 0 20px 60px #28325d1a;
+    }
+
+    header {
+      padding: 44px 28px 38px;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(130deg, #342783, #6554d9 58%, #8a53c6);
+    }
+
+    .eyebrow {
+      margin: 0 0 10px;
+      color: #e3ddff;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      font-weight: 900;
+      letter-spacing: 0.045em;
+      line-height: 1.05;
+      text-shadow: 0 3px 0 #241a66, 0 8px 18px #17104466;
+    }
+
+    .subtitle {
+      margin: 15px 0 0;
+      color: #f1efff;
+      font-size: 1.05rem;
+    }
+
+    .schedule {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      padding: 28px;
+    }
+
+    .day-card {
+      display: grid;
+      grid-template-columns: 12px 1fr;
+      gap: 16px;
+      align-items: stretch;
+      padding: 18px;
+      border: 1px solid #e8eaf4;
+      border-radius: 16px;
+      background: #fff;
+      box-shadow: 0 5px 14px #2630540a;
+    }
+
+    .accent {
+      border-radius: 10px;
+      background: var(--accent);
+    }
+
+    .day {
+      margin: 0 0 5px;
+      color: var(--accent);
+      font-size: 1.16rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .subject {
+      margin: 0;
+      font-size: 1.03rem;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .time {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--accent) 10%, white);
+      color: #343957;
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+
+    .monday { --accent: #e0643e; }
+    .tuesday { --accent: #168c83; }
+    .wednesday { --accent: #5868d9; }
+    .thursday { --accent: #ba4d9b; }
+    .friday { --accent: #c18416; }
+    .saturday { --accent: #427b48; }
+
+    footer {
+      margin: 0 28px 28px;
+      padding: 16px;
+      border-radius: 14px;
+      background: #f4f2ff;
+      color: #4c4771;
+      font-size: 0.94rem;
+      text-align: center;
+    }
+
+    footer strong {
+      color: #5142b1;
+    }
+
+    @media (max-width: 620px) {
+      body {
+        padding: 20px 12px;
+      }
+
+      header {
+        padding: 34px 18px;
+      }
+
+      .schedule {
+        grid-template-columns: 1fr;
+        padding: 18px;
+      }
+
+      footer {
+        margin: 0 18px 18px;
+      }
+    }
+
+    @media print {
+      :root,
+      body {
+        background: #fff;
+      }
+
+      body {
+        padding: 0;
+      }
+
+      main {
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      header,
+      .day-card,
+      .time,
+      footer {
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Focus • Learn • Succeed</p>
+      <h1>My Night Study Plan</h1>
+      <p class="subtitle">One subject each night | 10:00 PM – 12:00 AM</p>
+    </header>
+
+    <section class="schedule" aria-label="Weekly study schedule">
+      <article class="day-card monday">
+        <div class="accent" aria-hidden="true"></div>
+        <div>
+          <h2 class="day">Monday</h2>
+          <p class="subject">C.D.S</p>
+          <span class="time">10:00 PM – 12:00 AM</span>
+        </div>
+      </article>
+
+      <article class="day-card tuesday">
+        <div class="accent" aria-hidden="true"></div>
+        <div>
+          <h2 class="day">Tuesday</h2>
+          <p class="subject">I.C.T</p>
+          <span class="time">10:00 PM – 12:00 AM</span>
+        </div>
+      </article>
+
+      <article class="day-card wednesday">
+        <div class="accent" aria-hidden="true"></div>
+        <div>
+          <h2 class="day">Wednesday</h2>
+          <p class="subject">Introduction to Information Systems</p>
+          <span class="time">10:00 PM – 12:00 AM</span>
+        </div>
+      </article>
+
+      <article class="day-card thursday">
+        <div class="accent" aria-hidden="true"></div>
+        <div>
+          <h2 class="day">Thursday</h2>
+          <p class="subject">Computer Organisation and Architecture</p>
+          <span class="time">10:00 PM – 12:00 AM</span>
+        </div>
+      </article>
+
+      <article class="day-card friday">
+        <div class="accent" aria-hidden="true"></div>
+        <div>
+          <h2 class="day">Friday</h2>
+          <p class="subject">Communication Skills</p>
+          <span class="time">10:00 PM – 12:00 AM</span>
+        </div>
+      </article>
+
+      <article class="day-card saturday">
+        <div class="accent" aria-hidden="true"></div>
+        <div>
+          <h2 class="day">Saturday</h2>
+          <p class="subject">Intermediate Coding</p>
+          <span class="time">10:00 PM – 12:00 AM</span>
+        </div>
+      </article>
+    </section>
+
+    <footer><strong>Sunday:</strong> Rest, recharge, and get ready for a new week.</footer>
+  </main>
+</body>
+</html>
